@@ -12,8 +12,8 @@ Welcome to the **Java Interview Questions** repository! This collection is desig
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/java-interview-questions.git
-cd java-interview-questions
+git clone https://github.com/your-username/java-streams-interview-questions.git
+cd java-streams-interview-questions
 ```
 
 ## Topics Covered
