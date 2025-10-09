@@ -1,4 +1,4 @@
-package problems;
+package streamsAndLambdas.problems;
 
 import entity.Product;
 

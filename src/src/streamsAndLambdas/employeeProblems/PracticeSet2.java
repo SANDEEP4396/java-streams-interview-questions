@@ -1,4 +1,4 @@
-package employeeProblems;
+package streamsAndLambdas.employeeProblems;
 
 import entity.Employee;
 
