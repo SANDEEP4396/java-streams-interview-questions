@@ -20,12 +20,9 @@ cd java-streams-interview-questions
 
 This repository includes questions from the following areas:
 
-- Java Basics (Syntax, Data Types, Variables)
-- Object-Oriented Programming (OOP) Concepts
-- Collections Framework
-- Exception Handling
+- 
 - Multithreading & Concurrency
-- Java 8 Features (Streams, Lambdas)
+- Java 8 Features (Streams ✅, Lambdas ✅)
 - Design Patterns
 - JVM Internals & Memory Management
 - Input/Output (IO & NIO)
