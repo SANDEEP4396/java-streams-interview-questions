@@ -2,6 +2,7 @@ package entity;
 
 import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class Product {
     private int id;
     private String productName;

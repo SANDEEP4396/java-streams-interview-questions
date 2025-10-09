@@ -2,6 +2,7 @@ package entity;
 
 import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class Employee{
     private int id;
     private String name;
