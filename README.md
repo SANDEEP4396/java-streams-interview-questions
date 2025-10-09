@@ -20,7 +20,6 @@ cd java-streams-interview-questions
 
 This repository includes questions from the following areas:
 
-- 
 - Multithreading & Concurrency
 - Java 8 Features (Streams ✅, Lambdas ✅)
 - Design Patterns
