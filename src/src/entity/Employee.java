@@ -6,6 +6,21 @@ public class Employee{
     private int id;
     private String name;
     private int age;
+    private String gender;
+    private String department;
+    private int yearOfJoining;
+    private double Salary;
+
+    public Employee(int id, String name, int age, String gender,  String department, int yearOfJoining, double salary) {
+        this.id = id;
+        Salary = salary;
+        this.yearOfJoining = yearOfJoining;
+        this.department = department;
+        this.gender = gender;
+        this.name = name;
+        this.age = age;
+    }
+
 
     public Employee(int id, String name, int age) {
         this.id = id;
@@ -37,24 +52,60 @@ public class Employee{
         this.age = age;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public int getYearOfJoining() {
+        return yearOfJoining;
+    }
+
+    public void setYearOfJoining(int yearOfJoining) {
+        this.yearOfJoining = yearOfJoining;
+    }
+
+    public double getSalary() {
+        return Salary;
+    }
+
+    public void setSalary(double salary) {
+        Salary = salary;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return id == employee.id && age == employee.age && Objects.equals(name, employee.name);
+        return id == employee.id && age == employee.age && yearOfJoining == employee.yearOfJoining && Double.compare(Salary, employee.Salary) == 0 && Objects.equals(name, employee.name) && Objects.equals(gender, employee.gender) && Objects.equals(department, employee.department);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, age);
+        return Objects.hash(id, name, age, gender, department, yearOfJoining, Salary);
     }
 
     @Override
     public String toString() {
-        return "entities.Employee{" +
+        return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", department='" + department + '\'' +
+                ", yearOfJoining=" + yearOfJoining +
+                ", Salary=" + Salary +
                 '}';
     }
 }
