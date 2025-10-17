@@ -1,0 +1,8 @@
+THREAD COMMUNICATION
+Without proper communication mechanisms, thread might end up in inefficient busy-waiting states, leading to wastage of CPU resources and potential deadlocks.
+Few methods as below can be used to make inter thread communications
+ 1. notify
+ 2. notifyAll
+ 3. wait
+ These methods can only be called inside synchronized blocks.
+ Producer needs to inform consumer this is efficient.
