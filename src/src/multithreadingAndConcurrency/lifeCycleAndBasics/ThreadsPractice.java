@@ -1,4 +1,4 @@
-package multithreadingAndConcurrency;
+package multithreadingAndConcurrency.lifeCycleAndBasics;
 
 /**
  * Thread lifecycle

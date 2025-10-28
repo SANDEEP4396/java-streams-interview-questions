@@ -1,4 +1,4 @@
-package multithreadingAndConcurrency;
+package multithreadingAndConcurrency.lifeCycleAndBasics;
 
 public class StatesOfThread extends Thread{
     @Override

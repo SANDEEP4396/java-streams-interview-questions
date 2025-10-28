@@ -1,4 +1,4 @@
-package multithreadingAndConcurrency;
+package multithreadingAndConcurrency.lifeCycleAndBasics;
 
 public class MethodsOfThread extends Thread{
     public MethodsOfThread(String name) {

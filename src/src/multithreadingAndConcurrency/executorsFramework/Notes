@@ -1,0 +1,91 @@
+Thread Pool in Java
+Definition
+A Thread Pool is a collection of pre-initialized threads that can be reused to execute multiple tasks concurrently. Instead of creating a new thread for each task, which can be resource-intensive,
+a thread pool manages a set of threads that can be reused for executing tasks.
+
+**Key Components**
+Executor Interface: The main interface for managing a pool of threads. It provides methods to submit tasks for execution.
+ExecutorService Interface: Extends the Executor interface and provides methods for managing the lifecycle of the pool (e.g., shutdown).
+ThreadPoolExecutor Class: The core implementation of the ExecutorService interface. It allows you to configure the number of threads, task queue, and other parameters.
+Benefits of Using Thread Pools
+Performance Improvement: Reduces the overhead of thread creation and destruction.
+Resource Management: Limits the number of concurrent threads, preventing resource exhaustion.
+Task Management: Provides a way to manage and schedule tasks efficiently.
+
+
+
+*** How to Create a Thread Pool ****
+You can create a thread pool using the
+Executors
+factory class. Here are some common methods:
+1.Fixed Thread Pool: A fixed number of threads are created.
+java
+ ExecutorService fixedThreadPool = Executors.newFixedThreadPool(n);
+2. Cached Thread Pool: Threads are created as needed, and idle threads are reused.
+java
+ ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+3. Single Thread Executor: A single thread is used to execute tasks sequentially.
+java
+ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
+4. Scheduled Thread Pool: Allows scheduling of tasks to run after a delay or periodically.
+java
+ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(n);
+Submitting Tasks
+You can submit tasks to the thread pool using the
+submit()
+or
+execute()
+methods:
+submit(Callable<T> task)
+: Returns a Future object that can be used to retrieve the result.
+execute(Runnable command)
+: Does not return a result.
+Example
+Here’s a simple example demonstrating the use of a fixed thread pool:
+java
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ThreadPoolExample {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(3);
+
+        for (int i = 0; i < 10; i++) {
+            final int taskId = i;
+            executor.submit(() -> {
+                System.out.println("Task " + taskId + " is running");
+                try {
+                    Thread.sleep(2000); // Simulate work
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            });
+        }
+
+        executor.shutdown(); // Initiates an orderly shutdown
+    }
+}
+Managing the Thread Pool
+Shutdown: Use
+shutdown()
+to stop accepting new tasks and finish executing existing ones.
+Shutdown Now: Use
+shutdownNow()
+to attempt to stop all actively executing tasks and return a list of the tasks that were waiting to be executed.
+Conclusion
+Thread pools are a powerful feature in Java that help manage concurrent tasks efficiently. By reusing threads, they improve performance and resource utilization, making them essential for high-performance applications.
+
+
+===========================EXECUTORS===========================
+The Executor Framework in Java is a high-level API that simplifies the management of concurrent tasks by providing a
+set of interfaces and classes for executing tasks asynchronously, managing thread pools, and scheduling tasks, thereby
+abstracting the complexities of thread creation and management.
+
+------Key components of Executor framework------------
+1. Executor interface
+    * The core interface that defines a simple mechanism for executing tasks.
+    * It has a single method. void execute(Runnable command).
+
+2. ExecutorService interface
+    * Extends Executor interface and adds methods for managing the lifecycle of executor, such as shutting it down.
+

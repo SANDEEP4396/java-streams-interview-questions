@@ -1,4 +1,4 @@
-package deadlock;
+package multithreadingAndConcurrency.deadlock;
 
 public class DeadLockCondition {
  public static void main(String[] args) {
@@ -47,7 +47,7 @@ class Task1 implements Runnable {
 
     @Override
     public void run() {
-        pen.writeWithPenAndPaper(paper); // Thread1 locks pen and tries to lock paper.
+        pen.writeWithPenAndPaper(paper); // Thread1 multithreadingAndConcurrency.locks pen and tries to lock paper.
     }
 }
 
@@ -64,8 +64,8 @@ class Task2 implements Runnable {
     @Override
     public void run() {
         synchronized (pen){
-            paper.writeWithPaperAndPen(pen); // Acquires paper lock only when it has the pen lock to avoid deadlock.
+            paper.writeWithPaperAndPen(pen); // Acquires paper lock only when it has the pen lock to avoid multithreadingAndConcurrency.deadlock.
         }
-     //   paper.writeWithPaperAndPen(pen); // Thread2 locks paper and tries to lock pen.
+     //   paper.writeWithPaperAndPen(pen); // Thread2 multithreadingAndConcurrency.locks paper and tries to lock pen.
     }
 }
