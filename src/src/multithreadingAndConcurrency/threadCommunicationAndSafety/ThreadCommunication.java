@@ -1,4 +1,4 @@
-package ThreadCommunicationAndSafety;
+package multithreadingAndConcurrency.threadCommunicationAndSafety;
 
 public class ThreadCommunication {
     public static void main(String[] args) {

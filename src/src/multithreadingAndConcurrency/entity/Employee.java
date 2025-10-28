@@ -1,4 +1,4 @@
-package entity;
+package multithreadingAndConcurrency.entity;
 
 import java.util.Objects;
 

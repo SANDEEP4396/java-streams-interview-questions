@@ -1,6 +1,6 @@
 package streamsAndLambdas.problems;
 
-import entity.Product;
+import multithreadingAndConcurrency.entity.Product;
 
 import java.util.Arrays;
 import java.util.List;

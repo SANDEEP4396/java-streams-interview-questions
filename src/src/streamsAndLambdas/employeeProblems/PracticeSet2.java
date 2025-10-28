@@ -1,6 +1,6 @@
 package streamsAndLambdas.employeeProblems;
 
-import entity.Employee;
+import multithreadingAndConcurrency.entity.Employee;
 
 import java.util.*;
 import java.util.stream.Collectors;

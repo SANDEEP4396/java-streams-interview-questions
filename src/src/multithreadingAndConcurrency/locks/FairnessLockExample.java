@@ -1,10 +1,10 @@
-package locks;
+package multithreadingAndConcurrency.locks;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class UnfairLockExample {
-    private final Lock unfairLock = new ReentrantLock();
+public class FairnessLockExample {
+    private final Lock unfairLock = new ReentrantLock(true);
 
     public void accessResource() {
         unfairLock.lock();
@@ -20,7 +20,7 @@ public class UnfairLockExample {
     }
 
     public static void main(String[] args) {
-        UnfairLockExample example = new UnfairLockExample();
+        FairnessLockExample example = new FairnessLockExample();
         Runnable task = new Runnable() {
             @Override
             public void run() {
@@ -31,8 +31,9 @@ public class UnfairLockExample {
         Thread t1 = new Thread(task, "Thread 1");
         Thread t2 = new Thread(task, "Thread 2");
         Thread t3 = new Thread(task, "Thread 3");
+        t3.start();
         t1.start();
         t2.start();
-        t3.start();
+
     }
 }
