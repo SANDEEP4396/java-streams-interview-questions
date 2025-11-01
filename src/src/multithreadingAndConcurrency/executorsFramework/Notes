@@ -7,12 +7,12 @@ a thread pool manages a set of threads that can be reused for executing tasks.
 Executor Interface: The main interface for managing a pool of threads. It provides methods to submit tasks for execution.
 ExecutorService Interface: Extends the Executor interface and provides methods for managing the lifecycle of the pool (e.g., shutdown).
 ThreadPoolExecutor Class: The core implementation of the ExecutorService interface. It allows you to configure the number of threads, task queue, and other parameters.
-Benefits of Using Thread Pools
+
+
+=======Benefits of Using Thread Pools=============
 Performance Improvement: Reduces the overhead of thread creation and destruction.
 Resource Management: Limits the number of concurrent threads, preventing resource exhaustion.
 Task Management: Provides a way to manage and schedule tasks efficiently.
-
-
 
 *** How to Create a Thread Pool ****
 You can create a thread pool using the
@@ -88,4 +88,11 @@ abstracting the complexities of thread creation and management.
 
 2. ExecutorService interface
     * Extends Executor interface and adds methods for managing the lifecycle of executor, such as shutting it down.
+
+================RUNNABLE vs CALLABLE==================
+Runnable -> 1. Does not return
+            2. Has run() method does not throw exception we need to surround with try catch
+            3.
+Callable -> 1. Returns value
+            2. Has call() method and throws exception
 
