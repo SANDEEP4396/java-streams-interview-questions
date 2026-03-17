@@ -1,0 +1,6 @@
+A Java lambda expression is a concise way to represent an anonymous function (a function without a name) that can be treated as an instance of a functional interface. Introduced in Java 8, lambdas allow developers to write cleaner, more readable, and efficient code, especially when working with the [Streams API](https://www.geeksfor Geeks.org/java/lambda-expressions-java-8/) and collections.
+
+Key Concepts
+Anonymous Function: Lambdas do not have an explicit name, method modifiers (like public or private), or a return type declared in their syntax. The compiler infers these from the surrounding context.
+Functional Interface: A lambda expression can only be used in the context of a functional interface, which is an interface with exactly one abstract method. The lambda provides the implementation for that single method.
+Code as Data: Lambdas enable passing functionality (behavior) as an argument to another method, a core concept in functional programming
